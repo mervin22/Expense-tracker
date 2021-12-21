@@ -53,8 +53,9 @@ function onAddExpenseClick() {
     var amount = amountInputEl.value;
     if (name !==''&& amount !=='') {
         var transaction = {
+            id: uniqueId(),
             name: nameInputEl.value, 
-            amount: parseInt(amountInputEl.value), type: 'income'
+            amount: parseInt(amountInputEl.value), type: 'expense'
        };
        state.transactions.push(transaction);
   
